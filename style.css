@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+}
+
+/* .videoWrapper{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0;
+} */
+.iframe{
+    position: absolute;
+    top: 0;
+    left: 100bh;
+    width: 300vh;
+    height: 110%;
+    pointer-events: none;
+    overflow:hidden;
+}
+.buffer{
+    margin-left:20px;
+}
+.page-header section-dark{
+ overflow: hidden; 
+}
+
+
+.presentation-title{
+    color: white;
+}
+
+.bird-logo{
+   width: 90px ;
+   background-color: rgb(255,255,255,.4);
+   border-radius: 50px;
+   background-size: 50% 50%;
+   margin: 0px;
+    
+}
+
+.title_logo{
+    display: flex;
+    justify-content: space-between;
+}
