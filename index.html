@@ -90,8 +90,9 @@ The above copyright notice and this permission notice shall be included in all c
         Your browser does not support the video tag.
     </video> -->
     <!-- <div class="videoWrapper"> -->
-      <iframe class="iframe" allowfullscreen frameborder="0"src="https://www.youtube.com/embed/bP4w-Y266zE?autoplay=1&mute=1&loop=1&controls=0&modestbranding=0&autohide=1&showinfo=0"></iframe>
+      <!-- <iframe class="iframe" allowfullscreen frameborder="0"src="https://www.youtube.com/embed/bP4w-Y266zE?autoplay=1&mute=1&loop=1&controls=0&modestbranding=0&autohide=1&showinfo=0"></iframe> -->
     <!-- </div> -->
+    <div id="player"></div>
     <script>
       // 2. This code loads the IFrame Player API code asynchronously.
       var tag = document.createElement('script');
@@ -105,9 +106,12 @@ The above copyright notice and this permission notice shall be included in all c
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          width: '100%',
           videoId: 'bP4w-Y266zE',
-          playerVars: { 'autoplay': 1, 'playsinline': 1 },
+          playerVars: { 'autoplay': 1, 'playsinline': 1,
+                        'loop': 1, 'controls':1, 
+                        'modestbranding':1,'autohide':1,
+                        'showinfo':0
+                          },
           events: {
             'onReady': onPlayerReady
           }
@@ -120,6 +124,20 @@ The above copyright notice and this permission notice shall be included in all c
         event.target.playVideo();
       }
     </script>
+    
+    <style>
+    #player{
+
+      position: absolute;
+      top: 0;
+      left: 100bh;
+      width: 300vh;
+      height: 110%;
+      pointer-events: none;
+      overflow:hidden;
+      }
+
+    </style>
    
    
     <div class="content-center">
