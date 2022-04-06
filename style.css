@@ -12,9 +12,9 @@ body{
 .iframe{
     position: absolute;
     top: 0;
-    left: 100bh;
-    width: 300vh;
-    height: 110%;
+    left:0;
+    width: 110vmax;
+    height: auto;
     pointer-events: none;
     overflow:hidden;
 }
@@ -32,18 +32,26 @@ body{
 
 .bird-logo{
    width: 90px ;
-   background-color: rgb(255,255,255,.4);
-   border-radius: 50px;
-   background-size: 50% 50%;
-   margin: 0px;
-    
+  
+/* border-radius: 50px;
+   border: 0px;
+   padding: 0px;
+   background: ; */
 }
-
+.logo-background{
+    width: 65px;
+    height: 65px;
+    margin: 12px;
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    border-radius: 90px;
+    background-color: rgb(255,255,255,.4);
+    overflow: auto;
+}
 .title_logo{
     display: flex;
     justify-content: space-between;
+   
 }
 
-.page-header .section-dark{
-    background-color: transparent;
-}

@@ -46,9 +46,8 @@ The above copyright notice and this permission notice shall be included in all c
             <a class="navbar-brand" href="https://google.com">
                     NEOTROPICAL JOURNEYS
                 <span class="buffer"></span>
-                <span class="menu-logo">
-                <img src="./assets/img/favicon.png"class="bird-logo" >
-                </span>
+                  <span class="logo-background"></span>
+                  <img src="./assets/img/favicon.png"class="bird-logo" >
             </a>
         </div>
         <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,7 +65,7 @@ The above copyright notice and this permission notice shall be included in all c
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" target="_blank">
+            <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/profile.php?id=100074150963255 " target="_blank">
               <i class="fa fa-facebook-square"></i>
               <p class="d-lg-none">Facebook</p>
             </a>
@@ -107,10 +106,14 @@ The above copyright notice and this permission notice shall be included in all c
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
           videoId: 'bP4w-Y266zE',
-          playerVars: { 'autoplay': 1, 'playsinline': 1,
-                        'loop': 1, 'controls':1, 
-                        'modestbranding':1,'autohide':1,
-                        'showinfo':0
+          playerVars: {  'playsinline': 1,
+                         'loop': 1, 
+                         'controls':1, 
+                         'modestbranding':1,
+                         'autohide':1,
+                         'showinfo':0,
+                         'playlist': 'bP4w-Y266zE', 
+                         'startSeconds':'41'
                           },
           events: {
             'onReady': onPlayerReady
@@ -122,6 +125,7 @@ The above copyright notice and this permission notice shall be included in all c
       function onPlayerReady(event) {
          event.target.mute();
         event.target.playVideo();
+        event.target.seekTo(41, true)
       }
     </script>
     
@@ -151,12 +155,15 @@ The above copyright notice and this permission notice shall be included in all c
             <img src="./assets/img/fog-low.png" alt="">
         </div> -->
         </div>
-        <h2 class="presentation-subtitle text-center">Escape Completely </h2>
+        <h2 class="presentation-subtitle text-center">Plan your next trip with confidence </h2>
     </div>
     </div>
     <!-- <div class="moving-clouds" style="background-image: url('./assets/img/clouds.png'); "></div> -->
     <h6 class="category category-absolute">since 2020
     </h6>
+</div>
+<div class="main-2">
+  this is some other stuff
 </div>
 
     <!--   Core JS Files   -->
